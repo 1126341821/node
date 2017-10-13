@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<form method="get" action="http://127.0.0.1:8081/">
+			<input type="text" />
+			<input type="text" />
+			<input type="submit" />
+		</form>
+		<script type="text/javascript">
+			var url='http://127.0.0.1:8081/';
+			fetch(url, {
+				method: "GET",
+				mode: "no-cors"
+//				headers: {
+//					"Content-Type": "application/x-www-form-urlencoded"
+//				},
+			}).then(function(res) {
+				console.log("Response succeeded?", JSON.stringify(res.ok));
+				console.log(JSON.stringify(res));
+			}).catch(function(e) {
+				console.log("fetch fail", JSON.stringify(params));
+			});
+		</script>
+	</body>
+
+</html>

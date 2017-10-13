@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="http://common.cnblogs.com/script/jquery.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			//http://blog.csdn.net/sbt0198/article/details/66479510
+			$.ajax({
+			type: 'get',
+			url: 'http://127.0.0.1:8888/',
+			dataType: 'jsonp',
+			jsonp: "jsoncallback",
+			data:{a:1,b:2},
+			success: function(data) {
+				alert("用户名：" + data.user + " 密码：" + data.pass);
+			},
+			error: function() {
+				alert('fail');
+			}
+			});
+		</script>
+	</body>
+</html>
