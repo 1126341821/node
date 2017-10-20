@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script>
+			function jsonpCallback(result) {
+				const data = JSON.parse(result);
+				
+				console.log(data);
+			}
+		</script>
+		<script src="http://localhost:8081/tao/123/234?callback=jsonpCallback"></script>
+	</body>
+
+</html>
